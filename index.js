@@ -1,5 +1,5 @@
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(400, 600);
 }
 
 function draw() {
@@ -30,8 +30,8 @@ function draw() {
     drawDominoTile(250, 230, 60, 50, 5, 0);
 
     // Dibujar la ficha de dominó con 6 puntos
-    drawDominoTile(50, 300, 60, 100, 6, 0);
-    // drawDominoTile(50, 350, 60, 50, 6, 0);
+    drawDominoTile(50, 300, 60, 70, 6, 0);
+    drawDominoTile(50, 370, 60, 70, 6, 0);
 
     // // Dibujar la ficha de dominó con 0 puntos en la parte inferior
     // drawDominoTile(150, 250, 60, 30, 0, 180);
@@ -70,5 +70,11 @@ function drawDots(x, y, numDots) {
     if (numDots >= 4) {
         ellipse(x + 15, y + 9, 8, 8);
         ellipse(x - 15, y - 9, 8, 8);
+    }
+    if (numDots >= 6) {
+        ellipse(x - 15, y + 9, 8, 8);
+        ellipse(x + 15, y - 9, 8, 8);
+        ellipse(x - 15, y + 27, 8, 8);
+        ellipse(x + 15, y - -27, 8, 8);
     }
 }
